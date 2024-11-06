@@ -10,6 +10,9 @@ public class VIPCustomer extends Customer {
         customerGrade = "VIP";
         bonusRatio = 0.05;
         saleRatio = 0.1;
+
+        // 하위  클래스 생성 할 시 콘솔 출력문
+        System.out.println("VIPCustomer() 생성자 호출 ");
     }
 
     public int getAgentID() {
