@@ -5,6 +5,7 @@ public class VIPCustomer extends Customer {
     private int agentID; // VIP 고객 상담원 아이디
     double saleRatio; // 할인율
 
+    // 디폴트 생성자
     public VIPCustomer() {
 
         customerGrade = "VIP";
@@ -15,8 +16,18 @@ public class VIPCustomer extends Customer {
         System.out.println("VIPCustomer() 생성자 호출 ");
     }
 
+    // 할인율 적용
+    public int calcPrice(int price) {
+        bonusPoint += price * bonusRatio;
+        return price - (int)(price * saleRatio);
+    }
+
     public int getAgentID() {
         return agentID;
+    }
+
+    public String showCustomerInfo() {
+        return customerName + " 님의 등급은 " + customerGrade + " 이며, 보너스 포인트는 " + bonusPoint + " 입니다. ";
     }
 }
 
