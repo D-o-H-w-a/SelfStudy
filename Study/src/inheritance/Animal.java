@@ -13,18 +13,46 @@ public class Animal {
     // 동물 출생일
     protected String birth;
 
+    // 동물 번호 값 넘겨주기
+    public int getId() {
+        return id;
+    }
     // 동물 번호 값 받아오기
-    public void getId(int id) {
+    public void setId(int id) {
         this.id = id;
     }
 
-    // 동물 번호 값 넘겨주기
-    public int setId() {
-        return id;
+
+    // 동물 이름 값 넘겨주기
+    public String getName() {
+        if (name == null) {
+            return "";
+        }
+        return name;
     }
     // 동물 이름 값 받아오기
-    public void getName(String name) {
+    public void setName(String name) {
         this.name = name;
     }
 
+    // 동물 나이 넘겨주기
+    public int getAge() {
+        return age;
+    }
+    // 동물 나이 받아오기
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    // 동물 종류 넘겨주기
+    public String getType() {
+        if (type == null) {
+            return "";
+        }
+        return type;
+    }
+    // 동물 종류 받아오기
+    public void setType(String type) {
+        this.type = type;
+    }
 }
