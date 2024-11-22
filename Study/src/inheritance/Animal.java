@@ -22,7 +22,6 @@ public class Animal {
         this.id = id;
     }
 
-
     // 동물 이름 값 넘겨주기
     public String getName() {
         if (name == null) {
@@ -54,5 +53,17 @@ public class Animal {
     // 동물 종류 받아오기
     public void setType(String type) {
         this.type = type;
+    }
+
+    // 동물 출생일 넘겨주기
+    public String getBirth() {
+        if (birth == null) {
+            return "";
+        }
+        return birth;
+    }
+    // 동물 출생일 가져오기
+    public void setBirth(String birth) {
+        this.birth = birth;
     }
 }
