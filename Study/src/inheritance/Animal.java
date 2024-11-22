@@ -66,4 +66,12 @@ public class Animal {
     public void setBirth(String birth) {
         this.birth = birth;
     }
+
+    public Animal() {
+        id  = 0;
+        name = "동물";
+        age = 0;
+        type = "없음";
+        birth = "0000-00-00";
+    }
 }
