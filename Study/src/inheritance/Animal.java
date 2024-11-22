@@ -67,11 +67,11 @@ public class Animal {
         this.birth = birth;
     }
 
-    public Animal() {
-        id  = 0;
-        name = "동물";
-        age = 0;
-        type = "없음";
-        birth = "0000-00-00";
+    public Animal(int id, String name, int age, String type, String birth) {
+        this.id = id;
+        this.name = name;
+        this.age = age;
+        this.type = type;
+        this.birth = birth;
     }
 }
