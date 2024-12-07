@@ -16,8 +16,6 @@ public class Play {
         bike.engine();
         bike.move("좌측");
         bike.speed(15, 80);
-        bike.willy();
-
 
     }
 }
