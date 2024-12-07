@@ -1,14 +1,10 @@
 package abstInter;
 
-public class Car implements Vehicle {
+// 자동차
+public class Car extends Vehicle {
 
     @Override
-    public void move() {
-        System.out.println("차량을 타고 이동한다");
-    }
-
-    @Override
-    public void start() {
-        System.out.println("차량의 시동을 건다");
+    public void engine() {
+        System.out.println("열쇠를 돌려 시동을 건다.");
     }
 }
