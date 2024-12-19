@@ -1,9 +1,51 @@
 <mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.7.17 Chrome/128.0.6613.36 Electron/32.0.1 Safari/537.36" version="24.7.17">
   <diagram name="페이지-1" id="YMai1YUVfUBF3lLc7sM1">
-    <mxGraphModel dx="1434" dy="884" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="989" dy="610" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="S7mDRHHhHcW8NyFeJlAd-3" value="User_Info" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" parent="1">
+          <mxGeometry x="30" y="190" width="150" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="S7mDRHHhHcW8NyFeJlAd-4" value="num [유저 번호]" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="S7mDRHHhHcW8NyFeJlAd-3">
+          <mxGeometry y="30" width="150" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="S7mDRHHhHcW8NyFeJlAd-5" value="id [아이디]" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="S7mDRHHhHcW8NyFeJlAd-3">
+          <mxGeometry y="60" width="150" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="S7mDRHHhHcW8NyFeJlAd-6" value="pass [비밀번호]" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="S7mDRHHhHcW8NyFeJlAd-3">
+          <mxGeometry y="90" width="150" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="S7mDRHHhHcW8NyFeJlAd-16" value="&amp;nbsp;[비밀번호]" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="S7mDRHHhHcW8NyFeJlAd-3">
+          <mxGeometry y="120" width="150" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="S7mDRHHhHcW8NyFeJlAd-17" value="pass [비밀번호]" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="S7mDRHHhHcW8NyFeJlAd-3">
+          <mxGeometry y="150" width="150" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="S7mDRHHhHcW8NyFeJlAd-18" value="&lt;div&gt;이름, 주민번호 앞 + 뒤 1자리,&lt;/div&gt;&lt;div&gt;이메일, 현주소, 약관동의&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="15" y="5" width="180" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="S7mDRHHhHcW8NyFeJlAd-19" value="통신사, 전화번호, 약관동의" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="195" y="5" width="170" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="S7mDRHHhHcW8NyFeJlAd-20" value="아이디, 비밀번호, 자동 로그인 체크" style="text;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="370" y="5" width="220" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="S7mDRHHhHcW8NyFeJlAd-21" value="이름, 전화번호" style="text;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="570" y="5" width="110" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="S7mDRHHhHcW8NyFeJlAd-22" value="아이디, 이메일" style="text;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="660" y="5" width="110" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="S7mDRHHhHcW8NyFeJlAd-23" value="이름, 생년월일, 성별, 아이디,&#xa;비밀번호&#xa;이메일, 주소, 전화번호" style="text;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="15" y="50" width="190" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="S7mDRHHhHcW8NyFeJlAd-24" value="비밀번호, 탈퇴 일자, 탈퇴 계정확인" style="text;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="195" y="50" width="220" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="S7mDRHHhHcW8NyFeJlAd-26" value="유저 번호, 이름, 주민번호 앞 뒤, 아이디, 비밀번호, 주소, 이메일, 전화번호, 통신사" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="30" y="380" width="150" height="160" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
