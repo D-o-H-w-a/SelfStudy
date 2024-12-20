@@ -1,6 +1,6 @@
 <mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.7.17 Chrome/128.0.6613.36 Electron/32.0.1 Safari/537.36" version="24.7.17">
   <diagram name="페이지-1" id="YBRmQFVH9i4L7YW0Mh_G">
-    <mxGraphModel dx="2261" dy="2053" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1889" dy="1824" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -114,11 +114,49 @@
         <mxCell id="2TFwc7a3pwKRf25QPgmq-74" value="필수 입력값이 비었을 시 입력 문구 출력" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="671" y="190" width="120" height="60" as="geometry" />
         </mxCell>
+        <mxCell id="2TFwc7a3pwKRf25QPgmq-98" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;fontFamily=Helvetica;fontSize=12;fontColor=default;" edge="1" parent="1" source="2TFwc7a3pwKRf25QPgmq-75" target="2TFwc7a3pwKRf25QPgmq-97">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="2TFwc7a3pwKRf25QPgmq-75" value="메인화면" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="827" y="400" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="2TFwc7a3pwKRf25QPgmq-82" value="" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.annotation_2;align=left;labelPosition=right;pointerEvents=1;strokeColor=default;verticalAlign=top;arcSize=12;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=default;" vertex="1" parent="1">
           <mxGeometry x="458" y="-120" width="50" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="2TFwc7a3pwKRf25QPgmq-83" value="ID 찾기 오픈" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="508" y="-150" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="2TFwc7a3pwKRf25QPgmq-84" value="PW 찾기 오픈" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="508" y="-50.730000000000004" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="2TFwc7a3pwKRf25QPgmq-85" value="" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.annotation_2;align=left;labelPosition=right;pointerEvents=1;strokeColor=default;verticalAlign=top;arcSize=12;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=default;" vertex="1" parent="1">
+          <mxGeometry x="980" y="-119.37" width="50" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="2TFwc7a3pwKRf25QPgmq-92" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontFamily=Helvetica;fontSize=12;fontColor=default;" edge="1" parent="1" source="2TFwc7a3pwKRf25QPgmq-86" target="2TFwc7a3pwKRf25QPgmq-90">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="2TFwc7a3pwKRf25QPgmq-86" value="" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.annotation_1;align=left;pointerEvents=1;strokeColor=default;verticalAlign=top;arcSize=12;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=default;rotation=-180;" vertex="1" parent="1">
+          <mxGeometry x="628" y="-119.37" width="50" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="2TFwc7a3pwKRf25QPgmq-91" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;fontFamily=Helvetica;fontSize=12;fontColor=default;" edge="1" parent="1" source="2TFwc7a3pwKRf25QPgmq-90">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="860" y="-70.0344827586207" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2TFwc7a3pwKRf25QPgmq-90" value="이메일 인증" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="708" y="-100" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="2TFwc7a3pwKRf25QPgmq-93" value="서블릿 요청" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="860" y="-99.37" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="2TFwc7a3pwKRf25QPgmq-94" value="아이디 확인창" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1030" y="-150" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="2TFwc7a3pwKRf25QPgmq-95" value="비밀번호 재변경" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1030" y="-50.730000000000004" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="2TFwc7a3pwKRf25QPgmq-97" value="스케줄 데이터&lt;br&gt;가져오기" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1000" y="400" width="120" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
