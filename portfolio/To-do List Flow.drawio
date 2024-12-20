@@ -1,6 +1,6 @@
 <mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.7.17 Chrome/128.0.6613.36 Electron/32.0.1 Safari/537.36" version="24.7.17">
   <diagram name="페이지-1" id="YBRmQFVH9i4L7YW0Mh_G">
-    <mxGraphModel dx="956" dy="589" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="797" dy="491" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -26,7 +26,7 @@
           <mxGeometry x="330" y="390" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="2TFwc7a3pwKRf25QPgmq-8" value="회원가입 클릭" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="500" y="250" width="120" height="60" as="geometry" />
+          <mxGeometry x="500" y="235" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="2TFwc7a3pwKRf25QPgmq-26" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="2TFwc7a3pwKRf25QPgmq-9" target="2TFwc7a3pwKRf25QPgmq-17">
           <mxGeometry relative="1" as="geometry" />
@@ -61,19 +61,25 @@
           <mxGeometry x="960" y="300" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="2TFwc7a3pwKRf25QPgmq-59" value="" style="group" vertex="1" connectable="0" parent="1">
-          <mxGeometry x="450" y="200" width="50" height="180" as="geometry" />
+          <mxGeometry x="450" y="150" width="50" height="230" as="geometry" />
         </mxCell>
         <mxCell id="2TFwc7a3pwKRf25QPgmq-22" value="" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.annotation_2;align=left;labelPosition=right;pointerEvents=1;points=[[0,0.5,0,0,0],[0.5,0,0,0,0],[0.5,1,0,0,0],[1,0,0,0,0],[1,0.5,0,0,0],[1,1,0,0,0]];shadow=1;" vertex="1" parent="2TFwc7a3pwKRf25QPgmq-59">
-          <mxGeometry y="91.76470588235294" width="50" height="88.23529411764706" as="geometry" />
+          <mxGeometry y="117.25490196078432" width="50" height="112.7450980392157" as="geometry" />
         </mxCell>
         <mxCell id="2TFwc7a3pwKRf25QPgmq-58" value="" style="group" vertex="1" connectable="0" parent="2TFwc7a3pwKRf25QPgmq-59">
-          <mxGeometry x="20" width="30" height="91.76470588235294" as="geometry" />
+          <mxGeometry x="20" width="30" height="117.25490196078432" as="geometry" />
         </mxCell>
-        <mxCell id="2TFwc7a3pwKRf25QPgmq-56" value="" style="line;strokeWidth=2;direction=south;html=1;strokeColor=default;align=center;verticalAlign=top;arcSize=12;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=default;" vertex="1" parent="2TFwc7a3pwKRf25QPgmq-58">
-          <mxGeometry y="3.5294117647058822" width="10" height="88.23529411764706" as="geometry" />
+        <mxCell id="2TFwc7a3pwKRf25QPgmq-60" value="" style="group" vertex="1" connectable="0" parent="2TFwc7a3pwKRf25QPgmq-58">
+          <mxGeometry width="30" height="117.25490196078432" as="geometry" />
         </mxCell>
-        <mxCell id="2TFwc7a3pwKRf25QPgmq-57" value="" style="line;strokeWidth=2;html=1;strokeColor=default;align=center;verticalAlign=top;arcSize=12;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=default;" vertex="1" parent="2TFwc7a3pwKRf25QPgmq-58">
-          <mxGeometry x="4" width="26" height="8.823529411764707" as="geometry" />
+        <mxCell id="2TFwc7a3pwKRf25QPgmq-56" value="" style="line;strokeWidth=2;direction=south;html=1;strokeColor=default;align=center;verticalAlign=top;arcSize=12;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=default;" vertex="1" parent="2TFwc7a3pwKRf25QPgmq-60">
+          <mxGeometry y="4.509803921568628" width="10" height="112.7450980392157" as="geometry" />
+        </mxCell>
+        <mxCell id="2TFwc7a3pwKRf25QPgmq-57" value="" style="line;strokeWidth=2;html=1;strokeColor=default;align=center;verticalAlign=top;arcSize=12;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=default;" vertex="1" parent="2TFwc7a3pwKRf25QPgmq-60">
+          <mxGeometry x="4" width="26" height="11.270000000000001" as="geometry" />
+        </mxCell>
+        <mxCell id="2TFwc7a3pwKRf25QPgmq-62" value="&lt;div&gt;&lt;br&gt;&lt;/div&gt;ID / PW 찾기 클릭" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=default;align=center;verticalAlign=top;arcSize=12;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=default;" vertex="1" parent="1">
+          <mxGeometry x="500" y="130" width="120" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
