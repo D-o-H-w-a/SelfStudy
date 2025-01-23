@@ -1,0 +1,33 @@
+SELECT EMP_ID,
+		SAL_PAY,
+		SAL_BP,
+        SAL_HD,
+        SAL_OP,
+        SAL_EI,
+        SAL_WCI,
+        SAL_NPS,
+        SAL_HI,
+        SAL_LTC,
+        SAL_PAYDT,
+        SAL_FOOD,
+        SAL_CAR,
+        SAL_IRP,
+        SAL_BONUS
+FROM salary;
+
+SELECT EMP_ID AS "사원번호",
+		SAL_PAY AS "실지급액",
+		SAL_BP AS "기본급",
+        SAL_HD AS "휴일수당",
+        SAL_OP AS "연장수당",
+        SAL_EI AS "고용보험",
+        SAL_WCI AS "산재보험",
+        SAL_NPS AS "국민연금",
+        SAL_HI AS "건강보험",
+        SAL_LTC AS "장기요양보험",
+        SAL_PAYDT AS "지급일",
+        SAL_FOOD AS "식대",
+        SAL_CAR AS "차량유지비",
+        SAL_IRP AS "퇴직금",
+        SAL_BONUS AS "급여구분"
+FROM salary;
