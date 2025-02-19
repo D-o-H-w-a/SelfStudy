@@ -77,11 +77,11 @@ public class StreamingNotifier extends Application {
         GridPane mainGrid = new GridPane();
         mainGrid.setVgap(20);
         mainGrid.setAlignment(javafx.geometry.Pos.CENTER);
-        mainGrid.add(autoStartCheckBox, 0, 0); // 체크박스를 UI에 추가
+        mainGrid.add(streamingShortcutGrid, 0, 0);
+        mainGrid.add(streamingNotificationGrid, 0, 1);
+        mainGrid.add(autoStartCheckBox, 0, 2); // 체크박스를 UI에 추가
         GridPane.setHalignment(autoStartCheckBox, HPos.CENTER); // 중앙 정렬
         GridPane.setValignment(autoStartCheckBox, VPos.CENTER); // 중앙 정렬
-        mainGrid.add(streamingShortcutGrid, 0, 1);
-        mainGrid.add(streamingNotificationGrid, 0, 2);
 
         Scene scene = new Scene(mainGrid, 350, 300);
         stage.setScene(scene);

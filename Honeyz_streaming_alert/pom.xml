@@ -91,9 +91,6 @@
         <configuration>
           <outfile>${project.build.directory}/${project.artifactId}.exe</outfile>
           <jar>${project.build.directory}/${project.build.finalName}.jar</jar>
-          <jvmOptions>
-            <jvmOption>-Dfile.encoding=MS949</jvmOption>
-          </jvmOptions>
           <dontWrapJar>false</dontWrapJar>
           <headerType>gui</headerType>
         </configuration>
