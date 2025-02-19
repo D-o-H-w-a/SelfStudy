@@ -14,7 +14,6 @@
     <maven.compiler.target>11</maven.compiler.target>
     <javafx.version>11.0.2</javafx.version>
     <junit.version>5.10.2</junit.version>
-    <path.to.jdk>C:\Program Files\AdoptOpenJDK\jdk-14.0.2.12-hotspotd</path.to.jdk> <!-- JDK 경로 설정 -->
   </properties>
 
   <dependencies>
