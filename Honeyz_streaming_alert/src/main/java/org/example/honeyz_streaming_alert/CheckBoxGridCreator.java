@@ -11,17 +11,17 @@ import java.util.Map;
 public class CheckBoxGridCreator {
 
     // 방송 바로가기 레이아웃 생성
-    public static GridPane createBroadcastShortcutGrid(Map<String, Boolean> autoOpenEnabled) {
+    public static GridPane createStreamingShortcutGrid(Map<String, Boolean> autoOpenEnabled) {
         return createCheckBoxGrid(autoOpenEnabled, "방송 바로가기");
     }
 
     // 방송 알림 레이아웃 생성
-    public static GridPane createBroadcastNotificationGrid(Map<String, Boolean> autoOpenEnabled) {
-        return createCheckBoxGrid(autoOpenEnabled, "방송 알림");
+    public static GridPane createStreamingNotificationGrid(Map<String, Boolean> nofityEnabled) {
+        return createCheckBoxGrid(nofityEnabled, "방송 알림");
     }
 
     // 공통 체크박스 그리드 생성 메서드
-    private static GridPane createCheckBoxGrid(Map<String, Boolean> autoOpenEnabled, String title) {
+    private static GridPane createCheckBoxGrid(Map<String, Boolean> enabledStatus, String title) {
         // GridPane 설정
         GridPane grid = new GridPane();
         grid.setVgap(10);  // 세로 간격
@@ -43,14 +43,13 @@ public class CheckBoxGridCreator {
         int row = 1;  // 첫 번째 행은 제목이 차지하므로 두 번째 행부터 시작
         int col = 0;
 
-        for (Map.Entry<String, Boolean> entry : autoOpenEnabled.entrySet()) {
-            CheckBox checkBox = new CheckBox(entry.getKey());
+        for (Map.Entry<String, Boolean> entry : enabledStatus.entrySet()) {
+            CheckBox checkBox = new CheckBox(entry.getKey().split("_")[0]);
             checkBox.setSelected(entry.getValue());
 
-            // 체크박스 상태 변경 리스너
             checkBox.selectedProperty().addListener((observable, oldValue, newValue) -> {
-                // 체크박스 상태 변경시 autoOpenEnabled 맵 업데이트
-                autoOpenEnabled.put(entry.getKey(), newValue);
+                enabledStatus.put(entry.getKey(), newValue);
+                CheckBoxStateManager.getInstance().saveCheckBoxStates(enabledStatus, entry.getKey().contains("_Open") ? "_Open" : "_Nofi");
             });
 
             // 체크박스를 GridPane에 추가
