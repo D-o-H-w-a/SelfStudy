@@ -74,4 +74,33 @@ public class CheckBoxStateManager {
             System.err.println("Failed to create default config file: " + e.getMessage());
         }
     }
+
+    // 추가된 부분: 자동 시작 설정을 로드
+    public boolean loadAutoStartState() {
+        Properties properties = new Properties();
+        try (FileInputStream inputStream = new FileInputStream(configFilePath)) {
+            properties.load(inputStream);
+            return Boolean.parseBoolean(properties.getProperty("autoStart", "false"));
+        } catch (IOException e) {
+            System.err.println("Failed to load auto start state: " + e.getMessage());
+            return false;
+        }
+    }
+
+    // 추가된 부분: 자동 시작 설정을 저장
+    public void saveAutoStartState(boolean state) {
+        Properties properties = new Properties();
+        try (FileInputStream inputStream = new FileInputStream(configFilePath)) {
+            properties.load(inputStream);
+        } catch (IOException e) {
+            System.err.println("Failed to load existing properties: " + e.getMessage());
+        }
+
+        try (FileOutputStream outputStream = new FileOutputStream(configFilePath)) {
+            properties.setProperty("autoStart", Boolean.toString(state));
+            properties.store(outputStream, null);
+        } catch (IOException e) {
+            System.err.println("Failed to save auto start state: " + e.getMessage());
+        }
+    }
 }
