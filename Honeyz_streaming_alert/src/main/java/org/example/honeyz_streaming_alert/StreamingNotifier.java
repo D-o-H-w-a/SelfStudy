@@ -8,10 +8,13 @@ import javafx.stage.Stage;
 import javafx.util.Duration;
 
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
+import java.net.URI;
 import java.net.URL;
 import java.util.*;
 import java.util.List;
@@ -79,7 +82,8 @@ public class StreamingNotifier extends Application {
                     if (isLive && !isStreamingLive.get(channelName)) {
                         // 상태가 변경됨: 방송이 켜짐
                         isStreamingLive.put(channelName, true);
-                        showWindowsNotification("방송 알림",   channelName + "의 방송이 라이브 상태입니다!");
+                        showWindowsNotification("방송 알림",   channelName + "의 방송이 라이브 상태입니다!"
+                        , "https://chzzk.naver.com/live/" + channelId);
                     } else if (!isLive && isStreamingLive.get(channelName)) {
                         // 상태가 변경됨: 방송이 꺼짐
                         isStreamingLive.put(channelName, false);
@@ -96,7 +100,7 @@ public class StreamingNotifier extends Application {
         return jsonString.contains("\"openLive\":true");
     }
 
-    private void showWindowsNotification(String title, String message) {
+    private void showWindowsNotification(String title, String message, String url) {
         // Java AWT 트레이 아이콘을 사용할 수 있는지 확인
         if (!SystemTray.isSupported()) {
             System.err.println("시스템 트레이를 지원하지 않습니다.");
@@ -121,13 +125,21 @@ public class StreamingNotifier extends Application {
         // 알림 표시
         trayIcon.displayMessage(title, message, TrayIcon.MessageType.INFO);
 
+//        URL 이동 버튼 체크박스 추가 후 해제 예정
+//        try {
+//            System.out.println("URL 열기 시도: " + url);
+//            Desktop.getDesktop().browse(new URI(url));  // 브라우저에서 URL 열기
+//        } catch (Exception ex) {
+//            System.err.println("URL 열기 실패: " + ex.getMessage());
+//        }
+
         // 알림 표시 후 1초 뒤 트레이 아이콘 제거
         new java.util.Timer().schedule(new java.util.TimerTask() {
             @Override
             public void run() {
                 tray.remove(trayIcon);
             }
-        }, 1000);  // 1초 후 트레이 아이콘 제거
+        }, 500);  // 1초 후 트레이 아이콘 제거
     }
 
     public static void main(String[] args) {
