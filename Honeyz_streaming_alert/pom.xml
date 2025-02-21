@@ -73,9 +73,9 @@
               <filters>
                 <filter>
                   <artifact>*:*</artifact>
-                  <includes>
-                    <include>**/*.class</include>
-                  </includes>
+                  <excludes>
+                    <exclude>**/module-info.class</exclude>
+                  </excludes>
                 </filter>
               </filters>
               <!-- JAR 메타데이터에 mainClass 지정 -->
