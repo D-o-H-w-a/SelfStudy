@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
@@ -11,12 +10,13 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <maven.compiler.source>11</maven.compiler.source>
-    <maven.compiler.target>11</maven.compiler.target>
+    <maven.compiler.source>17</maven.compiler.source>
+    <maven.compiler.target>17</maven.compiler.target>
     <junit.version>5.10.2</junit.version>
   </properties>
 
   <dependencies>
+    <!-- JavaFX 의존성 추가 -->
     <dependency>
       <groupId>org.openjfx</groupId>
       <artifactId>javafx-controls</artifactId>
@@ -28,6 +28,7 @@
       <version>17.0.6</version>
     </dependency>
 
+    <!-- JUnit 의존성 추가 (테스트용) -->
     <dependency>
       <groupId>org.junit.jupiter</groupId>
       <artifactId>junit-jupiter-api</artifactId>
@@ -44,60 +45,64 @@
 
   <build>
     <plugins>
+      <!-- Maven Compiler Plugin (컴파일러 설정) -->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
         <version>3.8.1</version>
         <configuration>
-          <source>11</source>
-          <target>11</target>
+          <source>17</source>
+          <target>17</target>
         </configuration>
       </plugin>
 
+      <!-- Maven Shade Plugin (실행 가능한 JAR 생성) -->
       <plugin>
-        <groupId>org.openjfx</groupId>
-        <artifactId>javafx-maven-plugin</artifactId>
-        <version>0.0.8</version>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-shade-plugin</artifactId>
+        <version>3.2.1</version>
         <executions>
           <execution>
-            <id>default-cli</id>
+            <phase>package</phase>
+            <goals>
+              <goal>shade</goal>
+            </goals>
             <configuration>
-              <mainClass>org.example.honeyz_streaming_alert/org.example.honeyz_streaming_alert.BroadcastNotifier</mainClass>
-              <launcher>app</launcher>
-              <jlinkZipName>app</jlinkZipName>
-              <jlinkImageName>app</jlinkImageName>
-              <noManPages>true</noManPages>
-              <stripDebug>true</stripDebug>
-              <noHeaderFiles>true</noHeaderFiles>
-              <modulePath>${path.to.javafx.sdk}/lib</modulePath>  <!-- JavaFX SDK 경로 설정 -->
-              <addModules>javafx.controls,javafx.fxml</addModules>
+              <!-- 의존성 최소화, 모든 클래스를 JAR에 포함 -->
+              <createDependencyReducedPom>false</createDependencyReducedPom>
+              <filters>
+                <filter>
+                  <artifact>*:*</artifact>
+                  <includes>
+                    <include>**/*.class</include>
+                  </includes>
+                </filter>
+              </filters>
+              <!-- JAR 메타데이터에 mainClass 지정 -->
+              <transformers>
+                <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+                  <mainClass>org.example.honeyz_streaming_alert.StreamingNotifier</mainClass>
+                </transformer>
+              </transformers>
             </configuration>
           </execution>
         </executions>
       </plugin>
 
-      <!-- Launch4j Plugin to create EXE -->
+      <!-- Maven Jar Plugin (JAR 생성 시 기본 메인 클래스 설정) -->
       <plugin>
-        <groupId>com.akathist.maven.plugins.launch4j</groupId>
-        <artifactId>launch4j-maven-plugin</artifactId>
-        <version>2.1.2</version>
-        <executions>
-          <execution>
-            <goals>
-              <goal>launch4j</goal>
-            </goals>
-          </execution>
-        </executions>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-jar-plugin</artifactId>
+        <version>3.1.0</version>
         <configuration>
-          <outfile>${project.build.directory}/${project.artifactId}.exe</outfile>
-          <jar>${project.build.directory}/${project.build.finalName}.jar</jar>
-          <jvmOptions>
-            <jvmOption>-Dfile.encoding=MS949</jvmOption>
-          </jvmOptions>
-          <dontWrapJar>false</dontWrapJar>
-          <headerType>gui</headerType>
+          <archive>
+            <manifest>
+              <mainClass>org.example.honeyz_streaming_alert.StreamingNotifier</mainClass>
+            </manifest>
+          </archive>
         </configuration>
       </plugin>
+
     </plugins>
   </build>
 </project>
