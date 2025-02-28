@@ -16,6 +16,7 @@
   </properties>
 
   <dependencies>
+
     <!-- JavaFX 의존성 추가 -->
     <dependency>
       <groupId>org.openjfx</groupId>
@@ -45,7 +46,7 @@
 
   <build>
     <plugins>
-      <!-- Maven Compiler Plugin (컴파일러 설정) -->
+      <!-- Maven Compiler Plugin -->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
@@ -56,51 +57,30 @@
         </configuration>
       </plugin>
 
-      <!-- Maven Shade Plugin (실행 가능한 JAR 생성) -->
+      <!-- Maven Assembly Plugin (실행 가능한 JAR 생성) -->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-shade-plugin</artifactId>
-        <version>3.2.1</version>
-        <executions>
-          <execution>
-            <phase>package</phase>
-            <goals>
-              <goal>shade</goal>
-            </goals>
-            <configuration>
-              <!-- 의존성 최소화, 모든 클래스를 JAR에 포함 -->
-              <createDependencyReducedPom>false</createDependencyReducedPom>
-              <filters>
-                <filter>
-                  <artifact>*:*</artifact>
-                  <excludes>
-                    <exclude>**/module-info.class</exclude>
-                  </excludes>
-                </filter>
-              </filters>
-              <!-- JAR 메타데이터에 mainClass 지정 -->
-              <transformers>
-                <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-                  <mainClass>org.example.honeyz_streaming_alert.StreamingNotifier</mainClass>
-                </transformer>
-              </transformers>
-            </configuration>
-          </execution>
-        </executions>
-      </plugin>
-
-      <!-- Maven Jar Plugin (JAR 생성 시 기본 메인 클래스 설정) -->
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-jar-plugin</artifactId>
-        <version>3.1.0</version>
+        <artifactId>maven-assembly-plugin</artifactId>
+        <version>3.3.0</version>
         <configuration>
           <archive>
             <manifest>
               <mainClass>org.example.honeyz_streaming_alert.StreamingNotifier</mainClass>
             </manifest>
           </archive>
+          <descriptorRefs>
+            <descriptorRef>jar-with-dependencies</descriptorRef>
+          </descriptorRefs>
         </configuration>
+        <executions>
+          <execution>
+            <id>make-assembly</id>
+            <phase>package</phase>
+            <goals>
+              <goal>single</goal>
+            </goals>
+          </execution>
+        </executions>
       </plugin>
 
     </plugins>
