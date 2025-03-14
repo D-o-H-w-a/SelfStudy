@@ -252,7 +252,9 @@ public class StreamingNotifier extends Application {
     }
 
     private void hideToSystemTray(Stage stage) {
-        stage.setOpacity(0); // 창을 보이지 않게 함
+        Platform.runLater(() -> {
+            stage.hide(); // 창을 완전히 숨김
+        });
     }
 
     private void setupSystemTray(Stage stage) {
@@ -278,10 +280,15 @@ public class StreamingNotifier extends Application {
             @Override
             public void actionPerformed(ActionEvent e) {
                 Platform.runLater(() -> {
-                    stage.setOpacity(1); // 창을 다시 보이게 설정
-                    stage.show();
-                    stage.toFront(); // 창을 최상단으로 올리기
-                    stage.requestFocus(); // 포커스를 요청
+                    if (stage.isIconified()) {
+                        stage.setIconified(false); // 최소화 상태 해제
+                    }
+                    stage.hide(); // 혹시 남아 있을 상태 초기화
+                    stage.show(); // 창 표시
+                    stage.setAlwaysOnTop(true); // 최상위로 올림
+                    stage.setAlwaysOnTop(false); // 이후 일반 창으로 변경
+                    stage.toFront(); // 화면 맨 앞으로 이동
+                    stage.requestFocus(); // 사용자 입력 받을 수 있도록 포커스 설정
                 });
             }
         });
