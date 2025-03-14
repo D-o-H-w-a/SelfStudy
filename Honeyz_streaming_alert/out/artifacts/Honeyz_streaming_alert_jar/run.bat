@@ -1,5 +1,4 @@
 @echo off
-set JAVA_HOME=%~dp0\custom-jre
-set PATH=%JAVA_HOME%\bin;%PATH%
-java -jar Honeyz_streaming_alert.jar
-pause
+set JAVAFX_SDK=%~dp0javafx
+java --module-path %JAVAFX_SDK%\lib --add-modules javafx.controls -jar %~dp0Honeyz_streaming_alert.jar
+exit
